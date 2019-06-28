@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7E49B19F22BEA52600B6D4A9 /* GameController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E49B19E22BEA52500B6D4A9 /* GameController.swift */; };
+		7E49B1A122C428F200B6D4A9 /* GameControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E49B1A022C428F200B6D4A9 /* GameControllerTests.swift */; };
 		7EB7F6B422506DE200114ECC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EB7F6B322506DE200114ECC /* AppDelegate.swift */; };
 		7EB7F6B622506DE200114ECC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EB7F6B522506DE200114ECC /* ViewController.swift */; };
 		7EB7F6B922506DE200114ECC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7EB7F6B722506DE200114ECC /* Main.storyboard */; };
@@ -34,6 +36,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7E49B19E22BEA52500B6D4A9 /* GameController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameController.swift; sourceTree = "<group>"; };
+		7E49B1A022C428F200B6D4A9 /* GameControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameControllerTests.swift; sourceTree = "<group>"; };
 		7EB7F6B022506DE200114ECC /* tictactoe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = tictactoe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7EB7F6B322506DE200114ECC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7EB7F6B522506DE200114ECC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -103,6 +107,7 @@
 				7EB7F6BA22506DE300114ECC /* Assets.xcassets */,
 				7EB7F6BC22506DE300114ECC /* LaunchScreen.storyboard */,
 				7EB7F6BF22506DE300114ECC /* Info.plist */,
+				7E49B19E22BEA52500B6D4A9 /* GameController.swift */,
 			);
 			path = tictactoe;
 			sourceTree = "<group>";
@@ -112,6 +117,7 @@
 			children = (
 				7EB7F6C822506DE400114ECC /* tictactoeTests.swift */,
 				7EB7F6CA22506DE400114ECC /* Info.plist */,
+				7E49B1A022C428F200B6D4A9 /* GameControllerTests.swift */,
 			);
 			path = tictactoeTests;
 			sourceTree = "<group>";
@@ -257,6 +263,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7EB7F6B622506DE200114ECC /* ViewController.swift in Sources */,
+				7E49B19F22BEA52600B6D4A9 /* GameController.swift in Sources */,
 				7EB7F6B422506DE200114ECC /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -266,6 +273,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7EB7F6C922506DE400114ECC /* tictactoeTests.swift in Sources */,
+				7E49B1A122C428F200B6D4A9 /* GameControllerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -433,6 +441,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = GR32TJGDV7;
 				INFOPLIST_FILE = tictactoe/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -450,6 +459,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = GR32TJGDV7;
 				INFOPLIST_FILE = tictactoe/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

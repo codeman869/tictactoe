@@ -26,9 +26,55 @@ class tictactoeUITests: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
 
-    func testExample() {
-        // Use recording to get started writing UI tests.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    func testPressPlay() {
+        let button = XCUIApplication().otherElements.containing(.image, identifier:"board").children(matching: .button).element(boundBy: 0)
+        let beforeButton = button.screenshot()
+        button.tap()
+        let afterButton = button.screenshot()
+        
+        XCTAssertNotEqual(beforeButton, afterButton)
+        
+    }
+    
+    func testFirstPlayButtonDisabled() {
+        
+        let app = XCUIApplication()
+        app.otherElements.containing(.image, identifier:"board").children(matching: .button).element(boundBy: 0).tap()
+        
+        XCTAssertFalse(app.buttons["X Plays First"].isEnabled)
+        
+        
+    }
+    
+    func testWinShowsAlert() {
+        
+        let app = XCUIApplication()
+        let boardElementsQuery = app.otherElements.containing(.image, identifier:"board")
+        boardElementsQuery.children(matching: .button).element(boundBy: 0).tap()
+        boardElementsQuery.children(matching: .button).element(boundBy: 1).tap()
+        boardElementsQuery.children(matching: .button).element(boundBy: 4).tap()
+        boardElementsQuery.children(matching: .button).element(boundBy: 3).tap()
+        boardElementsQuery.children(matching: .button).element(boundBy: 8).tap()
+        
+        XCTAssertTrue(app.alerts["X has won!"].exists)
+ 
+    }
+    
+    func testCatsGameShowsAlert() {
+        
+        let app = XCUIApplication()
+        let boardElementsQuery = app.otherElements.containing(.image, identifier:"board")
+        boardElementsQuery.children(matching: .button).element(boundBy: 0).tap()
+        boardElementsQuery.children(matching: .button).element(boundBy: 4).tap()
+        boardElementsQuery.children(matching: .button).element(boundBy: 6).tap()
+        boardElementsQuery.children(matching: .button).element(boundBy: 3).tap()
+        boardElementsQuery.children(matching: .button).element(boundBy: 5).tap()
+        boardElementsQuery.children(matching: .button).element(boundBy: 2).tap()
+        boardElementsQuery.children(matching: .button).element(boundBy: 8).tap()
+        boardElementsQuery.children(matching: .button).element(boundBy: 7).tap()
+        boardElementsQuery.children(matching: .button).element(boundBy: 1).tap()
+        
+        XCTAssertTrue(app.alerts["Cats game!"].exists)
     }
 
 }
